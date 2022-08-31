@@ -17,15 +17,19 @@
      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
-     <div class="container" id="canvas">
+     <div class="circle"></div>
+     <div class="cursor"></div>
+     <div class="container">
           <header class="header">
-               <div class="header__logo"></div>
+               <div class="header__logo">
+                    <img src="resource/img/308190-200.png" alt="logo" width="35px" height="35px">
+               </div>
                <div class="header__menu">
-                    <ul>
-                         <li><a class="link" href="#"><span>Главная</span></a></li>
-                         <li><a class="link" href="#"><span>Сколько ещё</span></a></li>
-                         <li><a class="link" href="#"><span>Ссылки красотки</span></a></li>
-                         <li><a class="link" href="#"><span>Поздравление</span></a></li>
+                    <ul class="tabs">
+                         <li><a class="header__link" href="#tab1"><span>Главная</span></a></li>
+                         <li><a class="header__link" href="#tab2"><span>Сколько ещё</span></a></li>
+                         <li><a class="header__link" href="#tab3"><span>Ссылки красотки</span></a></li>
+                         <li><a class="header__link" href="#tab4"><span>Поздравление</span></a></li>
                     </ul>
                     <!-- <div class="header__btns">Главная</div>
                     <div class="header__btns">Сколько ещё</div>
@@ -33,22 +37,53 @@
                     <div class="header__btns">Поздравление</div> -->
                </div>
           </header>
-          <main class="content">
-               <div class="content__main-tittle">
-                    Всем привет!<br>Все вместе ждём прекрасный праздник, 
-                    а пока можете ознакомиться с содержанием сайта.
+          <div class="main-container">
+               <div class="main-container__content" id="tab1">
+                    <div class="main-container__main-tittle type-js">
+                         <span class="text-js">Всем привет!</span>
+                    </div>
+                    <div class="main-container__main-text">
+                         <p>Все вместе ждём прекрасный праздник,
+                              а пока можете ознакомиться с содержанием сайта.</p>
+                    </div>
                </div>
-               <div id="timer"></div>
-          </main>
+               <div class="main-container__content" id="tab2">
+                    <div id="timer"></div>
+               </div>
+               <div class="main-container__content" id="tab3"></div>
+               <div class="main-container__content" id="tab4"></div>
+          </div>
           <footer class="footer">
                <div class="footer__copyright">
                     <p>© 2022 Все права защищены</p>
                </div>
-               <div class="footer__links"></div>
+               <div class="footer__links">
+                    <div class="footer__btns btns-github">
+                         <a href="https://github.com/SVENmods" target="_blank"><img src="resource/img/github.png" alt="github" width="35px" height="35px"></a>
+                    </div>
+                    <div class="footer__btns btns-telegram">
+                         <a href="https://t.me/SVAD32" target="_blank"><img src="resource/img/telegram.png" alt="telegram" width="35px" height="35px"></a>
+                    </div>
+                    <div class="footer__btns btns-instagram">
+                         <a href="https://www.instagram.com/egor.burak/" target="_blank"><img src="resource/img/instagram.png" alt="instagram" width="35px" height="35px"></a>
+                    </div>
+               </div>
           </footer>
      </div>
-     <div class="circle"></div>
-     <div class="cursor"></div>
+     <!-- <div>
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+          </svg>
+     </div> -->
 </body>
 <script src="js/timer.js"></script>
 <script src="js/cursour.js"></script>

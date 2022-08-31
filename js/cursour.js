@@ -2,7 +2,7 @@
 (function () {
      const cursor = document.querySelector('.cursor');
      const circle = document.querySelector('.circle');
-     const links = document.querySelectorAll('.link');
+     const links = document.querySelectorAll('.header__link');
      const editPosCursor = (e) => {
           const { clientX: x, clientY: y } = e;
           cursor.style.left = x + 'px';
@@ -27,4 +27,4 @@
      window.addEventListener('mousemove', editPosCursor);
      links.forEach(link => link.addEventListener('mousemove', animateit));
      links.forEach(link => link.addEventListener('mouseleave', animateit));
- })();
+})();
