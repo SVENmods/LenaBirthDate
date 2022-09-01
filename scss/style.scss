@@ -13,8 +13,14 @@ body{
      background-size: 400%;
      display: flex;
      justify-content: center;
+     flex-direction: column;
+     font-family: 'Hando Soft Trial', sans-serif;
      align-items: center;
 }
+
+// *{
+//      outline: 1px solid red;
+// }
 
 @keyframes gradient {
      0% {
@@ -67,40 +73,38 @@ body{
 //      transform: translate3d(85px,0,0);
 //      }
 // }
-
 #timer{
-     font-size: 50px;
+     @include adaptiv-font(50, 12);
      color: #FFFFFF;
-     font-family: 'Hando Soft Trial', sans-serif;
+     margin-top: 5%;
 }
 
 *{
      cursor: none !important;
 }
 
-.container *{
-     outline: 1px solid red;
-}
+// .container *{
+//      outline: 1px solid red;
+// }
 
 .container {
      display: flex;
-     border: 1px solid red;
      width: 95%;
      height: 100%;
      flex-direction: column;
      font-size: 20px;
      color: #FFFFFF;
-     font-family: 'Hando Soft Trial', sans-serif;
 }
 .header {
      display: flex;
      flex: 0 0 auto;
      width: 100%;
-     height: 50px;
+     height: 75px;
      flex-direction: row;
      justify-content: space-between;
      user-select: none;
-     margin-top: 15px;
+     align-items: center;
+     background: rgba(255, 255, 255, 0.1);
 		&__logo {
                display: flex;
                width: 50px;
@@ -118,12 +122,7 @@ body{
                width: 60%;
                align-items: center;
                justify-content: space-between;
-               margin-right: 10%;
-		}
-
-		&__btns {
-               display: flex;
-               cursor: pointer;
+               margin-right: 5%;
 		}
 }
 .main-container {
@@ -136,6 +135,8 @@ body{
           &__content{
                display: none;
                text-align: center;
+               flex-direction: column;
+               user-select: none;
           }
 		&__main-tittle {
                justify-content: center;
@@ -146,6 +147,7 @@ body{
                margin-top: 5%;
                @include adaptiv-font(40, 10);
                max-width: 948px;
+               display: none;
           }
           .text-js{
                opacity: 0;
@@ -157,19 +159,18 @@ body{
                top: 0;
                right: -5px;
                width: 2px;
-               /* Change colour of Cursor Here */
                background-color: white;
                z-index: 1;
                animation: flash 0.5s none infinite alternate;
-             }
-             @keyframes flash{
+          }
+          @keyframes flash{
                0%{
-                 opacity: 1;
+                    opacity: 1;
                }
                100%{
-                 opacity: 0;
+                    opacity: 0;
                }
-             }
+          }
 }
 .footer {
      display: flex;
@@ -180,17 +181,19 @@ body{
      user-select: none;
      z-index: 3;
      opacity: 0.85;
-     // color: #000000;
+     color: #ffffff;
      align-items: center;
      justify-content: space-between;
 		&__copyright {
                cursor: default;
                @include adaptiv-font(14, 8);
+               margin-left: 5%;
 		}
 
 		&__links {
                display: flex;
                flex-direction: row;
+               margin-right: 5%;
 		}
 
           &__btns{
@@ -204,6 +207,24 @@ body{
                     height: 35px;
                }
           }
+}
+
+#tab3{
+     .footer__btns{
+          width: 50px;
+          height: 50px;
+     }
+     a{
+          width: 50px;
+          height: 50px;
+     }
+}
+
+.tab3-links{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     margin-top: 3%;
 }
 
 .circle,.cursor {
@@ -227,6 +248,10 @@ body{
      z-index: 11;
      transition: left 0.25s ease-out, top 0.25s ease-out, transform 0.25s linear;
 }
+
+*{
+     outline: 1px solid red;
+}
 .header__menu{
      ul {
           display: flex;
@@ -242,6 +267,7 @@ body{
           text-transform: uppercase;
           z-index: 10;
           transition: transform 0.3s ease;
+          text-align: center;
      }
      
      a > span {
