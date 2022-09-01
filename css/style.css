@@ -359,4 +359,9 @@ body {
   * {
     cursor: default !important;
   }
+  .circle.hover {
+    transform: none;
+    -webkit-animation: none;
+            animation: none;
+  }
 }
