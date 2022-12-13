@@ -14,7 +14,10 @@ let end_date = {
 "seconds": "00"
 }
 
+
 let end_date_str = `${end_date.full_year}-${end_date.month}-${end_date.day}T${end_date.hours}:${end_date.minutes}:${end_date.seconds}`;
+
+const tab4 = document.querySelector("#tab4")
 
 timer = setInterval(function () {
 let now = new Date();
@@ -22,7 +25,8 @@ let date = new Date(end_date_str);
 let ms_left = diffSubtract(now, date);
 if (ms_left <= 0) {
      clearInterval(timer);
-     alert("Время закончилось");
+     tab4.style.visibility = "visible"
+     
 } else {
      let res = new Date(ms_left);
      function checkMonth(){

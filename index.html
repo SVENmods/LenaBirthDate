@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +15,10 @@
      <meta name="theme-color" content="#ffffff">
      <link href="http://fonts.cdnfonts.com/css/hando-soft-trial" rel="stylesheet">
      <link rel="stylesheet" href="css/style.css"">
-     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+     <script src=" https://code.jquery.com/jquery-3.5.0.js">
+     </script>
 </head>
+
 <body>
      <header class="header">
           <div class="header__logo">
@@ -55,14 +58,21 @@
                     </div>
                     <div class="tab3-links">
                          <div class="footer__btns btns-telegram">
-                         <a href="https://t.me/galifreika" target="_blank"><img src="resource/img/telegram.png" alt="telegram" width="50px" height="50px"></a>
-                    </div>
-                    <div class="footer__btns btns-instagram">
-                         <a href="https://www.instagram.com/galifreika/" target="_blank"><img src="resource/img/instagram.png" alt="instagram" width="50px" height="50px"></a>
-                    </div>
+                              <a href="https://t.me/galifreika" target="_blank"><img src="resource/img/telegram.png"
+                                        alt="telegram" width="50px" height="50px"></a>
+                         </div>
+                         <div class="footer__btns btns-instagram">
+                              <a href="https://www.instagram.com/galifreika/" target="_blank"><img
+                                        src="resource/img/instagram.png" alt="instagram" width="50px" height="50px"></a>
+                         </div>
                     </div>
                </div>
-               <div class="main-container__content" id="tab4"></div>
+               <div class="main-container__content" id="tab4">
+                    <div id="tsparticles">
+                         <span style="color: #FFFFFF; position: relative; z-index:999999999999; font-size: 20px;">C Днем
+                              рождения, Дорогая!</span>
+                    </div>
+               </div>
           </div>
      </div>
      <!-- <div>
@@ -85,13 +95,16 @@
           </div>
           <div class="footer__links">
                <div class="footer__btns btns-github">
-                    <a href="https://github.com/SVENmods" target="_blank"><img src="resource/img/github.png" alt="github" width="35px" height="35px"></a>
+                    <a href="https://github.com/SVENmods" target="_blank"><img src="resource/img/github.png"
+                              alt="github" width="35px" height="35px"></a>
                </div>
                <div class="footer__btns btns-telegram">
-                    <a href="https://t.me/SVAD32" target="_blank"><img src="resource/img/telegram.png" alt="telegram" width="35px" height="35px"></a>
+                    <a href="https://t.me/SVAD32" target="_blank"><img src="resource/img/telegram.png" alt="telegram"
+                              width="35px" height="35px"></a>
                </div>
                <div class="footer__btns btns-instagram">
-                    <a href="https://www.instagram.com/egor.burak/" target="_blank"><img src="resource/img/instagram.png" alt="instagram" width="35px" height="35px"></a>
+                    <a href="https://www.instagram.com/egor.burak/" target="_blank"><img
+                              src="resource/img/instagram.png" alt="instagram" width="35px" height="35px"></a>
                </div>
           </div>
      </footer>
@@ -99,4 +112,14 @@
 <script src="js/timer.js"></script>
 <script src="js/cursour.js"></script>
 <script src="js/script.js"></script>
+<script
+     src="https://cdn.jsdelivr.net/npm/tsparticles-preset-fireworks@2/tsparticles.preset.fireworks.bundle.min.js"></script>
+<script type="text/javascript">
+     (async () => {
+          await tsParticles.load("tsparticles", {
+               preset: "fireworks",
+          });
+     })();
+</script>
+
 </html>
